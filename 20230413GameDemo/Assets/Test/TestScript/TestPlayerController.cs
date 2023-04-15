@@ -12,6 +12,7 @@ public class TestPlayerController : MonoBehaviour
 
     [Header("²¾°Ê°Ñ¼Æ")]
     [Range(5f,100f)]public float MoveSpeed;
+    [Range(5f, 100f)] public float JumpHigh;
     float MoveDir;
     
 
