@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TestPlayerController02 : MonoBehaviour
 {
+    //此為第三人稱視角以及俯視角的移動方式練習
     private CharacterController Controller;//獲取物件上的角色控制器
     [Header("移動參數")]
     public float MoveSpeed ;        //移動速度
@@ -53,7 +54,7 @@ public class TestPlayerController02 : MonoBehaviour
 
         transform.Rotate(Vector3.up,horizontal * RotateSpeed);
     }
-    void Move02()//府視角移動方式
+    void Move02()//府視角移動方式，w、s控制上下;a、d控制左右
     {
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
