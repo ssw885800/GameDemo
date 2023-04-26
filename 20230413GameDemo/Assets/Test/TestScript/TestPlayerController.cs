@@ -32,5 +32,11 @@ public class TestPlayerController : MonoBehaviour
         MoveDir = Input.GetAxis("Horizontal");  //取得左右移動按鍵
         PlayerRigidbody.velocity = new Vector2(MoveDir * MoveSpeed , PlayerRigidbody.velocity.y);      //一般移速
     }
-   
+    void Jump()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            PlayerRigidbody.velocity = new Vector2();
+        }
+    }
 }
