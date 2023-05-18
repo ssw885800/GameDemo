@@ -42,7 +42,6 @@ public class TestPlayerController03 : MonoBehaviour
         Flip();
         Debug.Log(movement);
     }
-
     void GravityAdd()   //ª±®a­«¤O
     {
         IsGround = Physics.CheckSphere(GroundCheck.position, CheckRadius, layerMask);
