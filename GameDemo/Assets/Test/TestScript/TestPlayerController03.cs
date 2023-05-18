@@ -34,15 +34,16 @@ public class TestPlayerController03 : MonoBehaviour
         GravityAdd();
     
     }
-    public void PlayerMoveInput(InputAction.CallbackContext callbackContext)
+    public void PlayerMoveInput(InputAction.CallbackContext callbackContext)    //獲取新輸入系統的移動數值
     {
-         movement = callbackContext.ReadValue<Vector2>();
+        movement = callbackContext.ReadValue<Vector2>();
         var move = transform.forward * MoveSpeed * movement.x * Time.deltaTime;
         Controller.Move(move);
+        Flip();
         Debug.Log(movement);
     }
 
-    void GravityAdd()
+    void GravityAdd()   //玩家重力
     {
         IsGround = Physics.CheckSphere(GroundCheck.position, CheckRadius, layerMask);
         if (IsGround && Velocity.y < 0)                 //判斷是否在地面，如果是，將落下的動量歸零
@@ -51,5 +52,16 @@ public class TestPlayerController03 : MonoBehaviour
         }
         Velocity.y += Gravity * Time.deltaTime;     //重力加速度
         Controller.Move(Velocity * Time.deltaTime);
+    }   
+    void Flip()     //透過縮放Z軸實現角色翻轉
+    {
+        if (movement.x > 0.1f)
+        {
+            transform.localScale = new Vector3(1,1,1);
+        }
+        if (movement.x < -0.1f)
+        {
+            transform.localScale = new Vector3(1,1,-1);
+        }
     }
 }

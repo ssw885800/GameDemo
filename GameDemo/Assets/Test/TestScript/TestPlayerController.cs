@@ -8,7 +8,7 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 public class TestPlayerController : MonoBehaviour
 {
     private CharacterController Controller;//獲取物件上的角色控制器
-
+    
     [Header("移動參數")]
     [Range(5f,100f)]public float MoveSpeed;//移動速度
     [Range(5f, 20f)] public float JumpHigh;//跳躍高度
@@ -32,6 +32,7 @@ public class TestPlayerController : MonoBehaviour
     void Update()
     {
         MoveMoment();//每幀執行移動控制器
+        Flip();
     }
     void MoveMoment()     //移動控制器
     {
@@ -53,5 +54,16 @@ public class TestPlayerController : MonoBehaviour
         Velocity.y += Gravity * Time.deltaTime;     //重力加速度
         Controller.Move(Velocity * Time.deltaTime);
     }
-    
+    void Flip()     //透過縮放Z軸實現角色翻轉
+    {
+        var horizontal = Input.GetAxis("Horizontal");
+        if (horizontal > 0.1f)
+        {
+             transform.localScale = new Vector3(1, 1, 1);
+        }
+        if(horizontal < -0.1f)
+        {
+            transform.localScale = new Vector3(1, 1, -1);
+        }
+    }
 }
