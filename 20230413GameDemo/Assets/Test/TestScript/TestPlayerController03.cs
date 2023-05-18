@@ -32,21 +32,19 @@ public class TestPlayerController03 : MonoBehaviour
     void Update()
     {
         GravityAdd();
-        PlayerMove();
+    
     }
     public void PlayerMoveInput(InputAction.CallbackContext callbackContext)
     {
          movement = callbackContext.ReadValue<Vector2>();
-    }
-    void PlayerMove()
-    {
-        IsGround = Physics.CheckSphere(GroundCheck.position, CheckRadius, layerMask);
-
         var move = transform.forward * MoveSpeed * movement.x * Time.deltaTime;
         Controller.Move(move);
+        Debug.Log(movement);
     }
+
     void GravityAdd()
     {
+        IsGround = Physics.CheckSphere(GroundCheck.position, CheckRadius, layerMask);
         if (IsGround && Velocity.y < 0)                 //判斷是否在地面，如果是，將落下的動量歸零
         {
             Velocity.y = 0;
