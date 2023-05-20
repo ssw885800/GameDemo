@@ -33,7 +33,6 @@ public class TestPlayerController03 : MonoBehaviour
     void Update()
     {
         MoveMment();
-        GravityAdd();
         Debug.Log("跳躍檢測"+Jumpcheck);
     }
     public void PlayerMoveInput(InputAction.CallbackContext callbackContext)    //獲取新輸入系統的移動數值
@@ -46,16 +45,7 @@ public class TestPlayerController03 : MonoBehaviour
     {
         Jumpcheck = callbackContext.ReadValue<float>() > 0;
     }
-    void GravityAdd()   //玩家重力
-    {
-        IsGround = Physics.CheckSphere(GroundCheck.position, CheckRadius, layerMask);
-        if (IsGround && Velocity.y < 0)                 //判斷是否在地面，如果是，將落下的動量歸零
-        {
-            Velocity.y = 0;
-        }
-        Velocity.y += Gravity * Time.deltaTime;     //重力加速度
-        Controller.Move(Velocity * Time.deltaTime);
-    }   
+    
     void Flip()     //透過縮放Z軸實現角色翻轉
     {
         if (movement.x > 0.1f)
@@ -69,12 +59,23 @@ public class TestPlayerController03 : MonoBehaviour
     }
     void MoveMment()
     {
-        
-        var move = transform.forward * MoveSpeed * movement.x * Time.deltaTime;
-        Controller.Move(move);
+
+        IsGround = Physics.CheckSphere(GroundCheck.position, CheckRadius, layerMask);
+
+        if (IsGround && Velocity.y < 0)                 //判斷是否在地面，如果是，將落下的動量歸零
+        {
+            Velocity.y = 0;
+        }
         if (IsGround && Jumpcheck)    //跳躍
         {
             Velocity.y += Mathf.Sqrt(JumpHigh * -2 * Gravity);
         }
+
+           //獲取InputManager的水平輸入
+        var move = transform.forward * MoveSpeed *movement.x * Time.deltaTime;
+        Controller.Move(move);
+
+        Velocity.y += Gravity * Time.deltaTime;     //重力加速度
+        Controller.Move(Velocity * Time.deltaTime);
     }
 }
