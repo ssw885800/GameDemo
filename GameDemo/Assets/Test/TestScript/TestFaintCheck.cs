@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TestFaintCheck : MonoBehaviour
 {
     bool FaintCheck;    //是否昏厥
     bool SlowDownCheck; //是否緩速
+
+    public static string SaveNowScene;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +25,9 @@ public class TestFaintCheck : MonoBehaviour
     void Faint()        //昏厥
     { 
         FaintCheck = true;
+        Time.timeScale = 0;
+        SaveNowScene =  SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("DeathScene",LoadSceneMode.Additive);
         Debug.Log("被強光照到了");
     }
     void OnSlowDown()         //進入緩速狀態
