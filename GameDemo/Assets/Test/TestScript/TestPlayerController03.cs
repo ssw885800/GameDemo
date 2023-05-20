@@ -14,7 +14,8 @@ public class TestPlayerController03 : MonoBehaviour
     [Range(5f, 20f)] public float JumpHigh;//跳躍高度
     public float Gravity = -9.8f;   //重力
     private Vector3 Velocity = Vector3.zero;    //3維向量變數
-    private Vector2 movement;
+    private Vector2 movement;                   //移動輸入
+    private bool Jumpcheck;
 
     [Header("地面檢測")]
     public Transform GroundCheck;   //獲取地面檢測體
@@ -31,16 +32,19 @@ public class TestPlayerController03 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MoveMment();
         GravityAdd();
-    
+        Debug.Log("跳躍檢測"+Jumpcheck);
     }
     public void PlayerMoveInput(InputAction.CallbackContext callbackContext)    //獲取新輸入系統的移動數值
     {
         movement = callbackContext.ReadValue<Vector2>();
-        var move = transform.forward * MoveSpeed * movement.x * Time.deltaTime;
-        Controller.Move(move);
         Flip();
         Debug.Log(movement);
+    }
+    public void PlayerJumpInput(InputAction.CallbackContext callbackContext)
+    {
+        Jumpcheck = callbackContext.ReadValue<float>() > 0;
     }
     void GravityAdd()   //玩家重力
     {
@@ -61,6 +65,16 @@ public class TestPlayerController03 : MonoBehaviour
         if (movement.x < -0.1f)
         {
             transform.localScale = new Vector3(1,1,-1);
+        }
+    }
+    void MoveMment()
+    {
+        
+        var move = transform.forward * MoveSpeed * movement.x * Time.deltaTime;
+        Controller.Move(move);
+        if (IsGround && Jumpcheck)    //跳躍
+        {
+            Velocity.y += Mathf.Sqrt(JumpHigh * -2 * Gravity);
         }
     }
 }

@@ -58,9 +58,4 @@ public class TestFaintCheck : MonoBehaviour
             ExitSlowDown();
         }
     }
-
-
-
-
-
 }
