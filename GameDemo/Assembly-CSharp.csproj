@@ -62,6 +62,7 @@
     <Compile Include="Assets\VolumetricLightBeam\Scripts\HD\VolumetricCookieHD.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\EffectPulse.cs" />
     <Compile Include="Assets\Test\TestScript\TestReStart.cs" />
+    <Compile Include="Assets\Test\TestScript\TestLIghtController.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Samples\Scripts\FreeCameraController.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\CachedLightProperties.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\SD\DynamicOcclusionRaycasting.cs" />
@@ -85,7 +86,6 @@
     <Compile Include="Assets\VolumetricLightBeam\Samples\Scripts\CameraToggleBeamVisibility.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\TriggerZone.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\MaterialManager.cs" />
-    <Compile Include="Assets\Test\TestScript\TestStrongLight.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\EffectAbstractBase.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\HD\GlobalMeshHD.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\HD\VolumetricLightBeamHD.cs" />
@@ -115,27 +115,48 @@
     <Compile Include="Assets\VolumetricLightBeam\Scripts\SRPHelper.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\HD\RaymarchingQuality.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Samples\Scripts\FeaturesNotSupportedMessage.cs" />
-    <Compile Include="Assets\Test\TestScript\TestLIghtController.cs" />
+    <Compile Include="Assets\Test\TestScript\TestLoopMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\VolumetricLightBeam\Shaders\shadergen_includes_hdrp.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\VolumetricLightBeam\Shaders\VolumetricLightBeamSharedSD.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\VolumetricLightBeam\Shaders\VolumetricLightBeamSharedHD.cginc" />
     <None Include="Assets\VolumetricLightBeam\Shaders\shadergen_includes_urp.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\VolumetricLightBeam\Shaders\ShaderUtils.cginc" />
     <None Include="Assets\VolumetricLightBeam\Shaders\ShaderSpecificURP.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\VolumetricLightBeam\Shaders\shadergen_pass.txt" />
     <None Include="Assets\VolumetricLightBeam\Shaders\ShaderProperties.cginc" />
     <None Include="Assets\VolumetricLightBeam\Shaders\VLBGeneratedShaderHD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\VolumetricLightBeam\Shaders\shadergen_base.txt" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\VolumetricLightBeam\Shaders\ShaderSpecificHDRP.hlsl" />
     <None Include="Assets\VolumetricLightBeam\Shaders\VLBGeneratedShaderSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\VolumetricLightBeam\Shaders\ShaderDefines.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\VolumetricLightBeamPackage\Readme.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\VolumetricLightBeam\Shaders\ShaderPropertySystem.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\VolumetricLightBeam\Shaders\ShaderMaths.cginc" />
     <None Include="Assets\VolumetricLightBeam\Shaders\shadergen_includes_builtin.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\VolumetricLightBeam\Shaders\ShaderSpecificBuiltin.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

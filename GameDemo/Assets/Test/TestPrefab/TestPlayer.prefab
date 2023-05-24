@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2197607878396999920}
   - component: {fileID: 2197607878396999919}
   - component: {fileID: 1012331420}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TestPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -143,7 +143,19 @@ MonoBehaviour:
     m_ActionId: 5f2f049f-0a4f-40da-b995-f9f80a9f454d
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2197607878396999919}
+        m_TargetAssemblyTypeName: TestPlayerController03, Assembly-CSharp
+        m_MethodName: PlayerJumpInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 93b4e9e7-5452-4a5f-ad87-ecfc9972f3fd
     m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/rightStick/down]
   m_NeverAutoSwitchControlSchemes: 0
@@ -165,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 10
   JumpHigh: 5
-  Gravity: -9.8
+  Gravity: -19.6
   GroundCheck: {fileID: 6467378800260722785}
   CheckRadius: 0.2
   layerMask:
@@ -194,7 +206,7 @@ GameObject:
   - component: {fileID: 5170069117919109158}
   - component: {fileID: 5170069117919109156}
   - component: {fileID: 5170069117919109157}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6467378800260722785}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +320,7 @@ GameObject:
   - component: {fileID: 5680274161443940476}
   - component: {fileID: 5861527042152608773}
   - component: {fileID: 7636294847002490175}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,9 +353,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.2
-  m_Range: 3.38
+  m_Color: {r: 1, g: 0.8443396, b: 0.8443396, a: 1}
+  m_Intensity: 0.03
+  m_Range: 3.83
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

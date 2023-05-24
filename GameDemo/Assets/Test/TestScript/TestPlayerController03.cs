@@ -10,8 +10,8 @@ public class TestPlayerController03 : MonoBehaviour
     private CharacterController Controller;//獲取物件上的角色控制器
 
     [Header("移動參數")]
-    [Range(5f, 100f)] public float MoveSpeed;//移動速度
-    [Range(5f, 20f)] public float JumpHigh;//跳躍高度
+    [Range(0f, 100f)] public float MoveSpeed;//移動速度
+    [Range(0f, 20f)] public float JumpHigh;//跳躍高度
     public float Gravity = -9.8f;   //重力
     private Vector3 Velocity = Vector3.zero;    //3維向量變數
     private Vector2 movement;                   //移動輸入
