@@ -82,6 +82,7 @@
     <Compile Include="Assets\VolumetricLightBeam\Scripts\EffectFlicker.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\BeamGeometryAbstractBase.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\EditorPrefsStrings.cs" />
+    <Compile Include="Assets\Test\TestScript\TestLoopMove.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\SD\SkewingHandleSD.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Samples\Scripts\CameraToggleBeamVisibility.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\TriggerZone.cs" />
@@ -115,7 +116,6 @@
     <Compile Include="Assets\VolumetricLightBeam\Scripts\SRPHelper.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Scripts\HD\RaymarchingQuality.cs" />
     <Compile Include="Assets\VolumetricLightBeam\Samples\Scripts\FeaturesNotSupportedMessage.cs" />
-    <Compile Include="Assets\Test\TestScript\TestLoopMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\VolumetricLightBeam\Shaders\shadergen_includes_hdrp.txt" />

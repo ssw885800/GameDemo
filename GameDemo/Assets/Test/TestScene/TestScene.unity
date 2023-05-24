@@ -884,7 +884,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-48492
+  m_Name: pb_Mesh28448
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1097,7 +1097,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-85290
+  m_Name: pb_Mesh28520
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2649,15 +2649,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1012331420, guid: 8a3252d8729e53c448668d88c134e07f, type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 701706415}
-    - target: {fileID: 2197607878396999919, guid: 8a3252d8729e53c448668d88c134e07f,
-        type: 3}
-      propertyPath: MoveSpeed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5170069116871450736, guid: 8a3252d8729e53c448668d88c134e07f,
         type: 3}
       propertyPath: m_RootOrder

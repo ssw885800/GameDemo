@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f98e1679f355d5c49b122ce1ffb1b9f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 10
+  MoveSpeed: 5
   JumpHigh: 5
   Gravity: -19.6
   GroundCheck: {fileID: 6467378800260722785}
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a18ba0aab4b27342bc0bc4312f0af41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 5170069116871450736}
 --- !u!1 &5170069117919109159
 GameObject:
   m_ObjectHideFlags: 0
